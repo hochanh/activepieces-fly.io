@@ -1,0 +1,16 @@
+# fly.toml file generated for activepieces on 2023-04-12T14:19:55+07:00
+
+app = "activepieces"
+primary_region = "sjc"
+
+[[services]]
+  internal_port = 80
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = "80"
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = "443"
